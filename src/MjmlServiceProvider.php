@@ -2,9 +2,9 @@
 
 namespace Maize\Mjml;
 
+use Maize\Mjml\Commands\MjmlCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Maize\Mjml\Commands\MjmlCommand;
 
 class MjmlServiceProvider extends PackageServiceProvider
 {
