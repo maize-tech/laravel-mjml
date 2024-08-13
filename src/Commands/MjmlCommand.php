@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Maize\Mjml\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class MjmlCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'laravel-mjml';
 
     public $description = 'My command';
 
