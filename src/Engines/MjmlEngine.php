@@ -9,13 +9,13 @@ class MjmlEngine extends CompilerEngine
 {
     public function get($path, array $data = []): string
     {
-        $html = parent::get($path, $data);
+        $value = parent::get($path, $data);
         $mjml = Mjml::new();
 
-        if ($mjml->canConvert($html)) {
-            return $mjml->minify()->toHtml($html);
+        if ($mjml->canConvert($value)) {
+            return $mjml->minify()->toHtml($value);
         }
 
-        return $html;
+        return $value;
     }
 }
