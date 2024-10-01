@@ -10,7 +10,7 @@
                 height="75px"
             ></mj-image>
         @else
-            <mj-text font-size="19px" font-weight="bold" color="#3d4852" align="center" padding="0">
+            <mj-text font-size="19px" font-weight="bold" color="#3d4852" align="center">
                 <a style="text-decoration: none; color: inherit;" href="{{ $url }}">{{ $slot }}</a>
             </mj-text>
         @endif
