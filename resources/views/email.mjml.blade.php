@@ -2,7 +2,7 @@
     {{-- Greeting --}}
     <x-mjml::greeting>
         @if (! empty($greeting))
-            {!! $greeting !!}
+            {{ $greeting }}
         @else
             @if ($level === 'error')
                 @lang('Whoops!')
@@ -14,7 +14,7 @@
 
     {{-- Intro Lines --}}
     @foreach ($introLines as $line)
-        <x-mjml::line>{!! $line !!}</x-mjml::line>
+        <x-mjml::line>{{ $line }}</x-mjml::line>
     @endforeach
 
     {{-- Action Button --}}
@@ -33,13 +33,13 @@
 
     {{-- Outro Lines --}}
     @foreach ($outroLines as $line)
-        <x-mjml::line>{!! $line !!}</x-mjml::line>
+        <x-mjml::line>{{ $line }}</x-mjml::line>
     @endforeach
 
     {{-- Salutation --}}
     <x-mjml::line>
         @if (! empty($salutation))
-            {!! $salutation !!}
+            {{ $salutation }}
         @else
             @lang('Regards'),<br>
             {{ config('app.name') }}
