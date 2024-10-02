@@ -7,6 +7,11 @@
             <mj-text color="#718096" line-height="1.4em" padding="0"></mj-text>
         </mj-attributes>
         <mj-style inline="inline">
+            a {
+                color: #3869d4;
+            }
+        </mj-style>
+        <mj-style inline="inline">
             p {
                 margin: 0 !important;
             }
