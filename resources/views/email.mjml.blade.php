@@ -13,9 +13,9 @@
     </x-mjml::greeting>
 
     {{-- Intro Lines --}}
-    @foreach ($introLines as $line)
-        <x-mjml::line>{{ $line }}</x-mjml::line>
-    @endforeach
+    <x-mjml::line>
+        {!! implode(PHP_EOL, $introLines) !!}
+    </x-mjml::line>
 
     {{-- Action Button --}}
     @isset($actionText)
@@ -32,9 +32,9 @@
     @endisset
 
     {{-- Outro Lines --}}
-    @foreach ($outroLines as $line)
-        <x-mjml::line>{{ $line }}</x-mjml::line>
-    @endforeach
+    <x-mjml::line>
+        {!! implode(PHP_EOL, $outroLines) !!}
+    </x-mjml::line>
 
     {{-- Salutation --}}
     <x-mjml::line>
