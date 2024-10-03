@@ -2,19 +2,19 @@
     {{-- Greeting --}}
     <x-mjml::greeting>
         @if (! empty($greeting))
-            {{ $greeting }}
+            # {{ $greeting }}
         @else
             @if ($level === 'error')
-                @lang('Whoops!')
+                # @lang('Whoops!')
             @else
-                @lang('Hello!')
+                # @lang('Hello!')
             @endif
         @endif
     </x-mjml::greeting>
 
     {{-- Intro Lines --}}
     <x-mjml::line>
-        {!! implode(PHP_EOL, $introLines) !!}
+        {!! implode(PHP_EOL . PHP_EOL, $introLines) !!}
     </x-mjml::line>
 
     {{-- Action Button --}}
@@ -33,7 +33,7 @@
 
     {{-- Outro Lines --}}
     <x-mjml::line>
-        {!! implode(PHP_EOL, $outroLines) !!}
+        {!! implode(PHP_EOL . PHP_EOL, $outroLines) !!}
     </x-mjml::line>
 
     {{-- Salutation --}}

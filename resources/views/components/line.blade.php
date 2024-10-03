@@ -1,3 +1,3 @@
-<mj-text font-size="16px" line-height="1.5em" css-class="line">
+<mj-text font-size="16px">
     {{ Illuminate\Mail\Markdown::parse($slot) }}
 </mj-text>

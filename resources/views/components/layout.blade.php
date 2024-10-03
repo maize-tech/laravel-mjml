@@ -7,25 +7,32 @@
             <mj-text color="#718096" line-height="1.4em" padding="0"></mj-text>
         </mj-attributes>
         <mj-style inline="inline">
+            h1 {
+                color: #3d4852;
+                font-size: 18px;
+                font-weight: bold;
+                margin-top: 0;
+            }
+            h2 {
+                font-size: 16px;
+                font-weight: bold;
+                margin-top: 0;
+            }
+            h3 {
+                font-size: 14px;
+                font-weight: bold;
+                margin-top: 0;
+            }
+            p {
+                line-height: 1.5em;
+                margin-top: 0;
+            }
             a {
                 color: #3869d4;
             }
-        </mj-style>
-        <mj-style inline="inline">
-            p {
-                margin: 0 !important;
-            }
-            .greeting p {
-                margin: 0 0 12px 0 !important;
-            }
-            .subcopy p {
-                margin: 0 0 14px 0 !important;
-            }
-            .footer p {
-                margin: 0 0 12px 0 !important;
-            }
-            .line p {
-                margin: 0 0 16px 0 !important;
+            .footer a {
+                color: #b0adc5;
+                text-decoration: underline;
             }
         </mj-style>
         <mj-style inline="inline">
@@ -41,6 +48,8 @@
 
         <mj-wrapper
             background-color="#ffffff"
+            border="1px solid #e8e5ef"
+            border-radius="2px"
             css-class="body-section"
             padding="0"
         >
