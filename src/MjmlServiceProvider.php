@@ -14,9 +14,11 @@ class MjmlServiceProvider extends PackageServiceProvider
     {
         $package
             ->name('laravel-mjml')
+            ->hasConfigFile()
             ->hasViews()
             ->hasInstallCommand(
                 fn (InstallCommand $command) => $command
+                    ->publishConfigFile()
                     ->publish('views')
                     ->askToStarRepoOnGitHub('maize-tech/laravel-mjml')
             );
