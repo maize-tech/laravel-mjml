@@ -102,6 +102,6 @@ return [
 
         'action' => null,
 
-    ]
+    ],
 
 ];

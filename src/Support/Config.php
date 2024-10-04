@@ -27,6 +27,7 @@ class Config
     public static function getConversionParams(): array
     {
         $conversionMode = self::getConversionMode()->value;
+
         return config("mjml.$conversionMode");
     }
 
