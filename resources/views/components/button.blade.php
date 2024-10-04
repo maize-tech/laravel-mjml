@@ -7,7 +7,7 @@
     font-size="16px"
     href="{{ $url }}"
     inner-padding="8px 18px"
-    line-height="1.4em"
+    line-height="1.4"
     padding="30px 0"
 >
     {{ $slot }}

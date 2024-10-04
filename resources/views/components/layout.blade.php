@@ -4,7 +4,7 @@
         <mj-attributes>
             <mj-all
                 font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"></mj-all>
-            <mj-text color="#718096" line-height="1.4em" padding="0"></mj-text>
+            <mj-text color="#718096" line-height="1.4" padding="0"></mj-text>
         </mj-attributes>
         <mj-style inline="inline">
             h1 {
@@ -24,7 +24,7 @@
                 margin-top: 0;
             }
             p {
-                line-height: 1.5em;
+                line-height: 1.5;
                 margin-top: 0;
             }
             a {
