@@ -1,6 +1,6 @@
 <x-mjml::message>
     {{-- Greeting --}}
-    <x-mjml::greeting>
+    <x-mjml::line>
         @if (! empty($greeting))
             # {{ $greeting }}
         @else
@@ -10,7 +10,7 @@
                 # @lang('Hello!')
             @endif
         @endif
-    </x-mjml::greeting>
+    </x-mjml::line>
 
     {{-- Intro Lines --}}
     <x-mjml::line>
