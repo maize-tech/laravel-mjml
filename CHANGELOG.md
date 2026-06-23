@@ -2,6 +2,14 @@
 
 All notable changes to `laravel-mjml` will be documented in this file.
 
+## 1.1.0 - 2026-06-23
+
+### What's Changed
+
+* Add Laravel 12/13 and PHP 8.5 support by @enricodelazzari in https://github.com/maize-tech/laravel-mjml/pull/15
+
+**Full Changelog**: https://github.com/maize-tech/laravel-mjml/compare/1.0.0...1.1.0
+
 ## 1.0.0 - 2026-06-23
 
 ### What's Changed
