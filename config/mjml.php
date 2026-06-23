@@ -1,5 +1,9 @@
 <?php
 
+use Maize\Mjml\Actions\APIConvert;
+use Maize\Mjml\Actions\NodeConvert;
+use Maize\Mjml\ConversionMode;
+
 return [
 
     /*
@@ -17,7 +21,7 @@ return [
     |
     */
 
-    'mode' => \Maize\Mjml\ConversionMode::Node,
+    'mode' => ConversionMode::Node,
 
     'node' => [
 
@@ -31,7 +35,7 @@ return [
         |
         */
 
-        'action' => \Maize\Mjml\Actions\NodeConvert::class,
+        'action' => NodeConvert::class,
 
         /*
         |--------------------------------------------------------------------------
@@ -63,7 +67,7 @@ return [
         |
         */
 
-        'action' => \Maize\Mjml\Actions\APIConvert::class,
+        'action' => APIConvert::class,
 
         /*
         |--------------------------------------------------------------------------

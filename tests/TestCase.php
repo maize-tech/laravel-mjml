@@ -15,6 +15,8 @@ class TestCase extends Orchestra
         Factory::guessFactoryNamesUsing(
             fn (string $modelName) => 'Maize\\Mjml\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
+
+        $this->app['view']->addLocation(__DIR__.'/Fixtures/views');
     }
 
     protected function getPackageProviders($app)
@@ -27,10 +29,5 @@ class TestCase extends Orchestra
     public function getEnvironmentSetUp($app)
     {
         config()->set('database.default', 'testing');
-
-        /*
-        $migration = include __DIR__.'/../database/migrations/create_laravel-mjml_table.php.stub';
-        $migration->up();
-        */
     }
 }
