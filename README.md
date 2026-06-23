@@ -282,6 +282,7 @@ Please review [our security policy](https://github.com/maize-tech/.github/securi
 ## Credits
 
 - [Riccardo Dalla Via](https://github.com/riccardodallavia)
+- [Enrico De Lazzari](https://github.com/enricodelazzari)
 - [All Contributors](../../contributors)
 
 ## License
