@@ -279,8 +279,6 @@ Please see [CONTRIBUTING](https://github.com/maize-tech/.github/blob/main/CONTRI
 
 Please review [our security policy](https://github.com/maize-tech/.github/security/policy) on how to report security vulnerabilities.
 
-> **Note on the API conversion mode:** when `ConversionMode::API` is enabled, the rendered email markup — which may contain personal data — is transmitted to the third-party `api.mjml.io` service. If your emails carry sensitive or personal information, prefer the local `ConversionMode::Node` to keep rendering in-house and minimize data sharing.
-
 ## Credits
 
 - [Riccardo Dalla Via](https://github.com/riccardodallavia)
