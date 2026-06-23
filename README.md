@@ -23,20 +23,6 @@ You can run the install command to publish the config file and views:
 php artisan laravel-mjml:install
 ```
 
-Alternatively, you can publish each resource separately.
-
-Publish the config file with:
-
-```bash
-php artisan vendor:publish --tag="laravel-mjml-config"
-```
-
-Publish the views (the email template and the Blade components) with:
-
-```bash
-php artisan vendor:publish --tag="laravel-mjml-views"
-```
-
 ### Requirements
 
 When using the default **Node** conversion mode, [MJML](https://github.com/mjmlio/mjml) must be available on the machine that renders the emails. You can install it globally with:
