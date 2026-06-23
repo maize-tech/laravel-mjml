@@ -1,6 +1,6 @@
 {
     "name": "maize-tech/laravel-mjml",
-    "description": "Laravel MJML",
+    "description": "Responsive MJML emails for Laravel",
     "keywords": [
         "Maize",
         "laravel",
