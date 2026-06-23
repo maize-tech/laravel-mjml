@@ -33,18 +33,45 @@ use Maize\Mjml\ConversionMode;
 return [
 
     /*
-     * The conversion mode used to convert MJML into HTML.
-     * Available options: ConversionMode::Node, ConversionMode::API, ConversionMode::Custom
-     */
+    |--------------------------------------------------------------------------
+    | Conversion mode
+    |--------------------------------------------------------------------------
+    |
+    | Here you may specify the conversion mode you may wish to use.
+    | Available options are:
+    | - Maize\Mjml\ConversionMode::Node
+    | - Maize\Mjml\ConversionMode::API
+    | - Maize\Mjml\ConversionMode::Custom
+    |
+    | By default, the value is Maize\Mjml\ConversionMode::Node
+    |
+    */
+
     'mode' => ConversionMode::Node,
 
-    /*
-     * The Node mode renders MJML locally through spatie/mjml-php, which relies on the
-     * `mjml` Node binary (install it with `npm install -g mjml`).
-     * The `options` array is passed to the renderer, see https://github.com/mjmlio/mjml#inside-nodejs
-     */
     'node' => [
+
+        /*
+        |--------------------------------------------------------------------------
+        | Conversion action
+        |--------------------------------------------------------------------------
+        |
+        | Here you may specify the fully qualified class name of the conversion action.
+        | By default, the value is Maize\Mjml\Actions\ConvertMjml::class
+        |
+        */
+
         'action' => NodeConvert::class,
+
+        /*
+        |--------------------------------------------------------------------------
+        | Node options
+        |--------------------------------------------------------------------------
+        |
+        | Here you may specify the options to use when converting MJML to HTML.
+        | See available options at https://github.com/mjmlio/mjml#inside-nodejs
+        |
+        */
 
         'options' => [
             'keepComments' => true,
@@ -54,23 +81,46 @@ return [
         ],
     ],
 
-    /*
-     * The API mode renders MJML through the hosted MJML API (https://mjml.io/api),
-     * using the given basic auth credentials.
-     */
     'api' => [
+
+        /*
+        |--------------------------------------------------------------------------
+        | Conversion action
+        |--------------------------------------------------------------------------
+        |
+        | Here you may specify the fully qualified class name of the conversion action.
+        | By default, the value is Maize\Mjml\Actions\ApiConvert::class
+        |
+        */
+
         'action' => APIConvert::class,
+
+        /*
+        |--------------------------------------------------------------------------
+        | API Authentication credentials
+        |--------------------------------------------------------------------------
+        |
+        | Here you may specify the basic auth credentials to use the MJML API.
+        |
+        */
 
         'auth_user' => env('MJML_API_AUTH_USER'),
         'auth_password' => env('MJML_API_AUTH_PASSWORD'),
     ],
 
-    /*
-     * The Custom mode renders MJML through your own invokable action class,
-     * which receives the compiled MJML string and must return the rendered HTML.
-     */
     'custom' => [
+
+        /*
+        |--------------------------------------------------------------------------
+        | Conversion action
+        |--------------------------------------------------------------------------
+        |
+        | Here you may specify the fully qualified class name of the conversion action.
+        |
+        */
+
         'action' => null,
+
     ],
 
 ];
