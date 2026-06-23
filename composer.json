@@ -1,6 +1,6 @@
 {
     "name": "maize-tech/laravel-mjml",
-    "description": "Laravel MJML",
+    "description": "Responsive MJML emails for Laravel",
     "keywords": [
         "Maize",
         "laravel",
@@ -12,6 +12,11 @@
         {
             "name": "Riccardo Dalla Via",
             "email": "riccardo.dallavia@maize.io",
+            "role": "Developer"
+        },
+        {
+            "name": "Enrico De Lazzari",
+            "email": "enrico.delazzari@maize.io",
             "role": "Developer"
         }
     ],
