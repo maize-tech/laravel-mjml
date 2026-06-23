@@ -5,7 +5,7 @@
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/maize-tech/laravel-mjml/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/maize-tech/laravel-mjml/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/maize-tech/laravel-mjml.svg?style=flat-square)](https://packagist.org/packages/maize-tech/laravel-mjml)
 
-Laravel MJML lets you write responsive HTML emails with [MJML](https://mjml.io) directly inside your Blade templates. Any view named `*.mjml.blade.php` is first compiled by the Blade engine and then converted to production-ready, email-client-safe HTML, so you keep the full power of Blade (components, slots, directives, localization) while authoring with MJML's concise, responsive syntax.
+Laravel MJML lets you write responsive HTML emails with [MJML](https://mjml.io/) directly inside your Blade templates. Any view named `*.mjml.blade.php` is first compiled by the Blade engine and then converted to production-ready, email-client-safe HTML, so you keep the full power of Blade (components, slots, directives, localization) while authoring with MJML's concise, responsive syntax.
 
 The package registers a dedicated `mjml` view engine, ships a set of ready-to-use Blade email components and a notification-friendly `MailMessage`, and supports three conversion backends out of the box: a local Node renderer (default), the hosted MJML API, or your own custom action.
 
