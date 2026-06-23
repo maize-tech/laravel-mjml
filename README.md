@@ -17,25 +17,13 @@ You can install the package via composer:
 composer require maize-tech/laravel-mjml
 ```
 
-You can run the install command to publish the config file and views:
+You can publish the config file and the views with the install command:
 
 ```bash
 php artisan laravel-mjml:install
 ```
 
-### Requirements
-
-When using the default **Node** conversion mode, [MJML](https://github.com/mjmlio/mjml) must be available on the machine that renders the emails. You can install it globally with:
-
-```bash
-npm install -g mjml
-```
-
-If you cannot run Node on your environment, use the **API** conversion mode instead (see [Configuration](#configuration)).
-
-## Configuration
-
-This is the content of the published `config/mjml.php` file:
+This is the contents of the published config file:
 
 ```php
 use Maize\Mjml\Actions\APIConvert;
@@ -50,11 +38,14 @@ return [
      */
     'mode' => ConversionMode::Node,
 
+    /*
+     * The Node mode renders MJML locally through spatie/mjml-php, which relies on the
+     * `mjml` Node binary (install it with `npm install -g mjml`).
+     * The `options` array is passed to the renderer, see https://github.com/mjmlio/mjml#inside-nodejs
+     */
     'node' => [
         'action' => NodeConvert::class,
 
-        // Options passed to the MJML renderer.
-        // See https://github.com/mjmlio/mjml#inside-nodejs
         'options' => [
             'keepComments' => true,
             'ignoreIncludes' => false,
@@ -63,14 +54,21 @@ return [
         ],
     ],
 
+    /*
+     * The API mode renders MJML through the hosted MJML API (https://mjml.io/api),
+     * using the given basic auth credentials.
+     */
     'api' => [
         'action' => APIConvert::class,
 
-        // Basic auth credentials for the MJML API.
         'auth_user' => env('MJML_API_AUTH_USER'),
         'auth_password' => env('MJML_API_AUTH_PASSWORD'),
     ],
 
+    /*
+     * The Custom mode renders MJML through your own invokable action class,
+     * which receives the compiled MJML string and must return the rendered HTML.
+     */
     'custom' => [
         'action' => null,
     ],
@@ -78,26 +76,26 @@ return [
 ];
 ```
 
+## Usage
+
 ### Conversion modes
 
-The `mode` option determines how MJML markup is turned into HTML.
+The `mode` config option determines how MJML markup is turned into HTML.
 
-#### Node (default)
+`ConversionMode::Node` (the default) renders MJML locally through [`spatie/mjml-php`](https://github.com/spatie/mjml-php), which relies on the `mjml` Node binary:
 
-Renders MJML locally through [`spatie/mjml-php`](https://github.com/spatie/mjml-php), which relies on the `mjml` Node binary. You can fine-tune the output through the `node.options` array — see the [MJML Node.js options](https://github.com/mjmlio/mjml#inside-nodejs) for the full list.
+```bash
+npm install -g mjml
+```
 
-#### API
-
-Sends the MJML markup to the hosted [MJML API](https://mjml.io/api) and returns the rendered HTML. It requires an account and the following environment variables:
+`ConversionMode::API` sends the MJML markup to the hosted [MJML API](https://mjml.io/api) and requires the following environment variables:
 
 ```dotenv
 MJML_API_AUTH_USER=your-application-id
 MJML_API_AUTH_PASSWORD=your-secret-key
 ```
 
-#### Custom
-
-Set `mode` to `ConversionMode::Custom` and point `custom.action` to your own invokable class. The action receives the compiled MJML string and must return the rendered HTML:
+`ConversionMode::Custom` lets you provide your own invokable action. It receives the compiled MJML string and must return the rendered HTML:
 
 ```php
 namespace App\Actions;
@@ -119,8 +117,6 @@ class MyConvert
     'action' => \App\Actions\MyConvert::class,
 ],
 ```
-
-## Usage
 
 ### Notifications
 
