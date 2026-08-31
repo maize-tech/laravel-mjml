@@ -27,7 +27,7 @@
         "spatie/mjml-php": "^1.2"
     },
     "require-dev": {
-        "guzzlehttp/guzzle": "^7.8",
+        "guzzlehttp/guzzle": "^8.1",
         "laravel/pint": "^1.14",
         "nunomaduro/collision": "^8.8",
         "larastan/larastan": "^3.0",
